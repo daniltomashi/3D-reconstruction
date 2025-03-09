@@ -1,0 +1,4 @@
+DATASETS:
+    - https://cvgl.stanford.edu/projects/pascal3d.html          (PASCAL3D). Good dataset for 3d reconstruction from single image
+    - http://pix3d.csail.mit.edu/                               (PIX3D)
+    - https://www.nuscenes.org/nuscenes#overview                (NUSCENES) with overview
