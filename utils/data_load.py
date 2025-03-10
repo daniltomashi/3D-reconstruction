@@ -6,11 +6,11 @@ import trimesh
 
 
 # load and transform data
-def load_image(image_path, mask_path, img_size=(224, 224)):
+def load_image(image_path, mask_path, img_size=None):
     img = Image.open(image_path).convert('RGB')
     mask = Image.open(mask_path).convert('L')   # grayscale
 
-    transform = T.Compose([T.Resize(img_size), T.ToTensor()])
+    transform = T.Compose([T.Resize(img_size), T.ToTensor()]) if img_size else T.Compose([T.ToTensor()])
     img = transform(img)
     mask = transform(mask)
 
